@@ -1,0 +1,20 @@
+{
+  "name": "andaluh-googledrive-addon",
+  "version": "0.1.0",
+  "description": "Transcriptor Andalûh para Google Drive. Transliterate español (spanish) spelling to andaluz proposals.",
+  "scripts": {
+    "lint": "eslint -c .eslintrc.json src/*.js",
+    "lint:fix": "eslint -c .eslintrc.json --fix src/*.js"
+  },
+  "author": {
+    "name": "J. Félix Ontañón",
+    "email": "felixonta@gmail.com",
+    "url": "https://andalugeeks.com"
+  },
+  "license": "GPLv3",
+  "devDependencies": {
+    "@google/clasp": "^2.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}

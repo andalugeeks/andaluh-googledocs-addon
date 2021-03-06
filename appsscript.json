@@ -1,0 +1,36 @@
+{
+  "timeZone": "Europe/Madrid",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "Andaluhjs",
+        "version": "0",
+        "libraryId": "1XFTMfTaW_Q1M7ZZfCKFbFVJRY7Nc8c4NN5UzAECNzcVtqR-6CM7UaQEX",
+        "developmentMode": true
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/documents.currentonly",
+    "https://www.googleapis.com/auth/script.container.ui"
+  ],
+  "runtimeVersion": "V8",
+  "urlFetchWhitelist": [
+    "https://api.qrserver.com/"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Andalûh para Google Drive",
+      "logoUrl": "https://drive.google.com/uc?export=view&id=1myHLFHQHHg6-0kT6zO9dnkr5-x7tyxGS",
+      "layoutProperties": {
+        "primaryColor": "#2772ed"
+      }
+    },
+    "docs": {
+      "homepageTrigger": {
+        "runFunction": "onOpen"
+      }
+    }
+  }
+}
