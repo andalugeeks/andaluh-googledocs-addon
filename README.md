@@ -2,7 +2,9 @@
 
 A side panel add-on for Google Docs (Google Drive) to help you transliterating español (spanish) spelling to andaluz proposals. It imports [andaluh-gs](https://github.com/andalugeeks/andaluh-js/tree/google-apps-script) library, already hosted at Google Apps Script.
 
-<img width="800" alt="andaluh-gs about" src="https://github.com/andalugeeks/andaluh-js/raw/google-apps-script/img/andaluh-gs.png?raw=true">
+<a href="https://youtu.be/cqScVjWM1EU"><img width="800" alt="andaluh-gs about" src="https://raw.githubusercontent.com/andalugeeks/andaluh-googledocs-addon/main/img/andaluh-googledocs.png"></a>
+
+<a href="https://youtu.be/cqScVjWM1EU">Click here or on the image to see the video.</a>
 
 ## Table of Contents
 
@@ -71,7 +73,7 @@ Go open the `google docs` file. Use the link prompted upon `clasp create`.
 
 Have a look at the featured video. Click for fullscreen:
 
-<a href="https://youtu.be/cqScVjWM1EU"><img width="800" alt="andaluh-gs about" src="https://github.com/andalugeeks/andaluh-js/raw/google-apps-script/img/andaluh-gs.png?raw=true"></a>
+<a href="https://youtu.be/cqScVjWM1EU"><img width="520" alt="andaluh-gs about" src="https://raw.githubusercontent.com/andalugeeks/andaluh-googledocs-addon/main/img/andaluh-googledocs.gif"></a>
 
 ## Roadmap
 
