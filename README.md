@@ -1,6 +1,6 @@
 # andaluh-googledocs-addon
 
-A side panel add-on for Google Docs (Google Drive) that uses [andaluh-js](https://github.com/andalugeeks/andaluh-js) to help you transliterating español (spanish) spelling to andaluz proposals.
+A side panel add-on for Google Docs (Google Drive) to help you transliterating español (spanish) spelling to andaluz proposals. It imports [andaluh-gs](https://github.com/andalugeeks/andaluh-js/tree/google-apps-script) library, already hosted at Google Apps Script.
 
 <img width="800" alt="andaluh-gs about" src="https://github.com/andalugeeks/andaluh-js/raw/google-apps-script/img/andaluh-gs.png?raw=true">
 
@@ -21,19 +21,51 @@ This package introduces transliteration functions to convert *español* (spanish
 
 ## Installation
 
-Automate the deployment with Google Apps Script `clasp` tool. Use the `package.json` file and `npm` to install such dependencies with
+Automate the installation with Google Apps Script `clasp` tool. Use the `package.json` file and `npm` to install such dependencies. You'll need having `npm` tool from `nodejs` already installed. But you can also install `clasp` with a different method (check https://github.com/google/clasp).
 
 ```
 $ npm install
 ```
 
-Login, create a project and push!
+Login. An OAuth-like authentication window will be opened in your browser:
 
 ```
 $ clasp login
-$ clasp create
-$ clasp push
+
+Logging in globally...
+(node:1428169) ExperimentalWarning: The fs.promises API is experimental
+🔑 Authorize clasp by visiting this url:
+https://accounts.google.com/o/oauth2/v2/auth?access_type=offline[...]
+
+Authorization successful.
+
+Default credentials saved to: ~/.clasprc.json
 ```
+
+Create a `google docs` project with `clasp` as well. A google apps script project will be created to host the source code (we will push the source code after).
+
+```
+$ clasp create --type docs --title Andaluh-GoogleDocs --rootDir ./src
+(node:1429190) ExperimentalWarning: The fs.promises API is experimental
+
+Created new Google Doc: https://drive.google.com/open?id=[...]
+Created new Google Docs Add-on script: https://script.google.com/d/[...]/edit
+```
+
+Note the two links prompted. Push the source code to the google apps script project created and you're ready to go!
+
+```
+$ clasp push
+(node:1428508) ExperimentalWarning: The fs.promises API is experimental
+? Manifest file has been updated. Do you want to push and overwrite? Yes
+└─ appsscript.json
+└─ main.js
+└─ sidebar.html
+└─ test.js
+Pushed 4 files.
+```
+
+Go open the `google docs` file. Use the link prompted upon `clasp create`.
 
 ## Usage
 
