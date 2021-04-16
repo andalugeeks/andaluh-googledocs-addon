@@ -31,7 +31,7 @@ function words(s) {
 }
 
 function loop(tests, vaf, vvf, escapeLinks) {
-  var epa = new Andaluhjs.EPA();
+  var epa = new AndaluhGS.EPA();
 
   var errors = false;
 

@@ -3,9 +3,8 @@
   "dependencies": {
     "libraries": [
       {
-        "userSymbol": "Andaluhjs",
-        "version": "0",
-        "libraryId": "1XFTMfTaW_Q1M7ZZfCKFbFVJRY7Nc8c4NN5UzAECNzcVtqR-6CM7UaQEX",
+        "userSymbol": "AndaluhGS",
+        "libraryId": "1qvvfm1jyjHNT6t_oYJWrhvug8Q1J8tpmNWqLSW0OBe802DxcwsOgMTV_",
         "developmentMode": true
       }
     ]
@@ -21,7 +20,7 @@
   ],
   "addOns": {
     "common": {
-      "name": "Andalûh para Google Drive",
+      "name": "Andaluh para Google Docs",
       "logoUrl": "https://drive.google.com/uc?export=view&id=1myHLFHQHHg6-0kT6zO9dnkr5-x7tyxGS",
       "layoutProperties": {
         "primaryColor": "#2772ed"

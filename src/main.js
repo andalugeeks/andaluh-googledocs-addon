@@ -227,7 +227,7 @@ function insertText(newText) {
  *     origin and dest languages are the same.
  */
 
-var epa = new Andaluhjs.EPA();
+var epa = new AndaluhGS.EPA();
 
 function translateText(text, vaf, vvf) {
   return epa.transcript(text, vaf, vvf, true);

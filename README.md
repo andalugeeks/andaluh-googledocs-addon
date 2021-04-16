@@ -11,6 +11,7 @@ A side panel add-on for Google Docs (Google Drive) to help you transliterating e
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Development](#development)
 - [Roadmap](#roadmap)
 - [Support](#support)
 - [Contributing](#contributing)
@@ -74,6 +75,12 @@ Go open the `google docs` file. Use the link prompted upon `clasp create`.
 Have a look at the featured video. Click for fullscreen:
 
 <a href="https://youtu.be/cqScVjWM1EU"><img width="520" alt="andaluh-gs about" src="https://raw.githubusercontent.com/andalugeeks/andaluh-googledocs-addon/main/img/andaluh-googledocs.gif"></a>
+
+## Development
+
+To use a different [andaluh-gs](https://github.com/andalugeeks/andaluh-js/tree/google-apps-script) transcription library version, deploy your own copy on your Google App Script account. Then edit the `appscript.json` file to reference your own version and follow the installation steps from step 1.
+
+Further reference on how to edit the `appscript.json` file here: https://developers.google.com/apps-script/manifest/dependencies
 
 ## Roadmap
 
