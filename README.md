@@ -1,6 +1,6 @@
 # andaluh-googledocs-addon
 
-A side panel add-on for Google Docs (Google Drive) to help you transliterating español (spanish) spelling to andaluz proposals. It imports [andaluh-gs](https://github.com/andalugeeks/andaluh-js/tree/google-apps-script) library, already hosted at Google Apps Script.
+A side panel add-on for Google Docs (Google Drive) to help you transliterating español (spanish) spelling to andaluz proposals. It uses a fork from [andaluh-gs](https://github.com/andalugeeks/andaluh-js/tree/google-apps-script) library, already embedded under `src/andaluhgs`.
 
 <a href="https://youtu.be/cqScVjWM1EU"><img width="800" alt="andaluh-gs about" src="https://raw.githubusercontent.com/andalugeeks/andaluh-googledocs-addon/main/img/andaluh-googledocs.png"></a>
 
@@ -61,11 +61,13 @@ Note the two links prompted. Push the source code to the google apps script proj
 $ clasp push
 (node:1428508) ExperimentalWarning: The fs.promises API is experimental
 ? Manifest file has been updated. Do you want to push and overwrite? Yes
-└─ appsscript.json
-└─ main.js
-└─ sidebar.html
-└─ test.js
-Pushed 4 files.
+└─ src/andaluhgs/epa.js
+└─ src/andaluhgs/util.js
+└─ src/appsscript.json
+└─ src/main.js
+└─ src/sidebar.html
+└─ src/test.js
+Pushed 6 files.
 ```
 
 Go open the `google docs` file. Use the link prompted upon `clasp create`.
@@ -78,9 +80,10 @@ Have a look at the featured video. Click for fullscreen:
 
 ## Development
 
-To use a different [andaluh-gs](https://github.com/andalugeeks/andaluh-js/tree/google-apps-script) transcription library version, deploy your own copy on your Google App Script account. Then edit the `appscript.json` file to reference your own version and follow the installation steps from step 1.
+To use a different [andaluh-gs](https://github.com/andalugeeks/andaluh-js/tree/google-apps-script) transcription library version you've two options
 
-Further reference on how to edit the `appscript.json` file here: https://developers.google.com/apps-script/manifest/dependencies
+* Edit the files under `src/andaluhgs`
+* Deploy your own `andaluhgs` as a Google App Script. Then remove the files under `src/andaluhgs` and add your own `andaluhgs` library as a dependency on the `appscript.json` file (further reference on how to edit the `appscript.json` file here: https://developers.google.com/apps-script/manifest/dependencies).
 
 ## Roadmap
 

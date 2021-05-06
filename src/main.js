@@ -1,4 +1,12 @@
 /**
+ * Copyleft (c) 2021 Andalugeeks
+ *
+ * Authors:
+ * - J. Félix Ontañón <felixonta@gmail.com>
+ *
+ */
+
+/**
  * @OnlyCurrentDoc
  *
  * The above comment directs Apps Script to limit the scope of file
@@ -7,6 +15,83 @@
  * and not all of the user's files. The authorization request message
  * presented to users will reflect this limited scope.
  */
+
+/**
+ * Callback for rendering the homepage card.
+ * @return {CardService.Card} The card to show to the user.
+ */
+
+// Inspired on the tutorial here: https://developers.google.com/workspace/add-ons/cats-quickstart
+// and here: https://www.youtube.com/watch?v=Ma8nR7-erPM
+function onHomepage(e) {
+
+  // Generates the entry at add-ons menu
+  onOpen(e);
+
+  // And now for the home page card creation
+  var findaddonText = CardService.newDecoratedText()
+      .setTopLabel("¡Complemento cargado!")
+      .setText("Encontrarás Andaluh para Google Docs en el menú Complementos (add-ons)")
+      .setWrapText(true);
+
+  var findaddonImage = CardService.newImage()
+      .setImageUrl('https://drive.google.com/uc?export=download&id=11i0GuwBGaQRrKYLqXCykj7wze6YFLna4')
+      .setAltText('Ir al Menu Complementos')
+
+  var videotutoText = CardService.newDecoratedText()
+      .setTopLabel("¿Necesitas más ayuda?")
+      .setText("Mira este tutorial en vídeo.")
+      .setWrapText(true);
+
+  var videotutoImage = CardService.newImage()
+      .setImageUrl('https://drive.google.com/uc?export=download&id=1vK0tTkaVrKlLkATp-9JM2g7JgZcxDfTI')
+      .setAltText('Ver tutorial')
+      .setOpenLink(CardService.newOpenLink()
+      .setUrl('https://www.youtube.com/watch?v=L83zw6-Tzj4'));
+
+  // Create a footer to be shown at the bottom.
+  var footer = CardService.newFixedFooter()
+      .setPrimaryButton(CardService.newTextButton()
+      .setText('Más información')
+      .setOpenLink(CardService.newOpenLink()
+      .setUrl('https://andaluh.es/google-drive-andaluz')));
+
+  // Assemble the widgets and return the card.
+  var findSection = CardService.newCardSection()
+      .addWidget(findaddonText)
+      .addWidget(findaddonImage);
+
+  var videotutoSection = CardService.newCardSection()
+      .addWidget(videotutoText)
+      .addWidget(videotutoImage);
+
+  var card = CardService.newCardBuilder()
+      .addCardAction(CardService.newCardAction()
+        .setText('Transcriptor Online')
+        .setOpenLink(CardService.newOpenLink()
+        .setUrl('https://andaluh.es/transcriptor'))
+      )
+      .addCardAction(CardService.newCardAction()
+        .setText('Teclado Andaluz')
+        .setOpenLink(CardService.newOpenLink()
+        .setUrl('https://andaluh.es/teclado-andaluz'))
+      )
+      .addCardAction(CardService.newCardAction()
+        .setText('Acerca de AndaluGeeks')
+        .setOpenLink(CardService.newOpenLink()
+        .setUrl('https://andaluh.es'))
+      )
+      .addSection(findSection)
+      .addSection(videotutoSection)
+      .setFixedFooter(footer);
+
+  return card.build();
+}
+
+// From here, the reference for this code was taken from the following tutorial
+// https://github.com/googleworkspace/apps-script-samples/tree/master/docs/translate
+// There's a pending task to convert this code into a full Google WorkSpace Add-On
+// with a native CardService re-implementation
 
 /**
  * Creates a menu entry in the Google Docs UI when the document is opened.
@@ -227,7 +312,7 @@ function insertText(newText) {
  *     origin and dest languages are the same.
  */
 
-var epa = new AndaluhGS.EPA();
+var epa = new EPA();
 
 function translateText(text, vaf, vvf) {
   return epa.transcript(text, vaf, vvf, true);

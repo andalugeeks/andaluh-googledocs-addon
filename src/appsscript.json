@@ -1,14 +1,5 @@
 {
   "timeZone": "Europe/Madrid",
-  "dependencies": {
-    "libraries": [
-      {
-        "userSymbol": "AndaluhGS",
-        "libraryId": "1qvvfm1jyjHNT6t_oYJWrhvug8Q1J8tpmNWqLSW0OBe802DxcwsOgMTV_",
-        "developmentMode": true
-      }
-    ]
-  },
   "exceptionLogging": "STACKDRIVER",
   "oauthScopes": [
     "https://www.googleapis.com/auth/documents.currentonly",
@@ -28,7 +19,7 @@
     },
     "docs": {
       "homepageTrigger": {
-        "runFunction": "onOpen"
+        "runFunction": "onHomepage"
       }
     }
   }
